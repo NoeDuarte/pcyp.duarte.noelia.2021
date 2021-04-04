@@ -8,12 +8,13 @@ namespace Clase1.Ejercicio1.Figuras
 {
     class Triangulo:Figura
     {
-        private double base1, altura;
+        private double base1, altura, lado;
 
         public Triangulo()
         {
             base1 = 0;
             altura = 0;
+            lado = 0;
         }
 
         public double getBase()
@@ -36,6 +37,16 @@ namespace Clase1.Ejercicio1.Figuras
             this.altura = altura;
         }
 
+        public double getLado()
+        {
+            return lado;
+        }
+
+        public void setLado(double lado)
+        {
+            this.lado = lado;
+        }
+
         public double calcularArea()
         {
             return (base1 * altura) / 2;
@@ -43,7 +54,7 @@ namespace Clase1.Ejercicio1.Figuras
 
         public double calcularPerimetro()
         {
-            return base1 * 3;
+            return base1 + (lado*2);
         }
     }
 }
